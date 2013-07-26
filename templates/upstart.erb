@@ -1,0 +1,7 @@
+description "Cool project"
+ 
+start on runlevel [23]
+ 
+respawn
+ 
+exec <%= @binary_path %> -config <%= @config_file %> >> <%= @log_file %> 2>&1

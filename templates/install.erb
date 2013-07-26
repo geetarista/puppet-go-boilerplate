@@ -1,0 +1,10 @@
+#!/bin/bash
+ 
+pushd /tmp
+ 
+wget -O project.tar.gz <%= @project_url %>
+tar xzf project.tar.gz
+chmod 0755 project
+mv project <%= @binary_path %>
+ 
+popd
